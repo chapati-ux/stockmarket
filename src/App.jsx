@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs'
 import Services from './pages/Services'
 import Pricing from './pages/Pricing'
 import ContactUs from './pages/ContactUs'
+import Login from './pages/Login';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
        <Route path='/services' element={<Services/>}/>
        <Route path='/pricing' element={<Pricing/>}/>
        <Route path='/contactus' element={<ContactUs/>}/>
+       <Route path='/login' element={<Login/>}/>
       </Routes>
     </>
   )
