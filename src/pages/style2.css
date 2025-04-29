@@ -11,6 +11,7 @@ background: linear-gradient(180deg, #0D0F29 0%,  #7FA1E2 100%);
 }
 .main h2{
 text-align: center;
+
 position: relative;
 top: 8rem;
 color: white;

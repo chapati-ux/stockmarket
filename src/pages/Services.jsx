@@ -9,6 +9,8 @@ import ss6 from "../assets/images/ss6.png";
 import ss7 from "../assets/images/ss7.png";
 import ss8 from "../assets/images/ss8.png";
 import Footer from '../components/Footer';
+import mail from '../assets/images/mail-icon.svg'
+
 const Services = () => {
   return (
     <>
@@ -124,8 +126,7 @@ const Services = () => {
         </div>
       </div>
 
-      <Footer/>
-    </>
+      <Footer img={mail} h1={"We’re here to help you invest smarter."}  p={"Whether you have a question, need  assistance, or want to explore our services in more detail — reach out and our team will get back to you shortly."}/>    </>
   );
 };
 

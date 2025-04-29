@@ -13,9 +13,17 @@ import "../index.css";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import mail from '../assets/images/mail-icon.svg'
+import js1  from '../assets/images/js1.jpg'
+import js2  from '../assets/images/js2.png'
+import js3  from '../assets/images/js3.png'
+import Pop from "../components/Pop";
+import Wh from "../components/Wh";
+
 const Home = () => {
   return (
     <div>
+      <Wh/>
+            <Pop/>
       <Nav />
       <div className="hs1">
         <div className="htext">
@@ -25,7 +33,7 @@ const Home = () => {
           </h1>
 
           <p>
-            Trusted guidance, real-time strategies, and data-backed stock <br />{" "}
+            Trusted guidance, real-time strategies, and data-backed stock <br />
             market insights — built for smart traders and long-term investors.
           </p>
 
@@ -37,7 +45,12 @@ const Home = () => {
         </div>
 
         <div className="hb">
-          <img src={water} alt="" />
+          <img className="js1" src={js1} alt="" />
+          <img className="js2" src={js2} alt="" />
+
+          <img className="js3" src={js3} alt="" />
+
+          <img className="js4" src={water} alt="" />
         </div>
       </div>
 
@@ -115,7 +128,7 @@ const Home = () => {
         <div className="hs3text">
           <h1>And that’s just the beginning.</h1>
           <p>Tap into advanced strategies, expert insights, and full-spectrum market guidance.</p>
-          <button>Explore Services</button>
+           <button><Link to="/services">Explore Services</Link>  </button>
         </div>
       </div>
 
