@@ -36,7 +36,7 @@ const Nav = () => {
           <Link className="link" to="/services">Services</Link>
           <Link className="link" to="/pricing">Pricing</Link>
           <Link className="link" to="/contactus">ContactUs</Link>
-          <Link className="link" to="/concern">User Concern</Link>
+          <Link className="link" to="/userconcent">User Concern</Link>
         </div>
 
         <div className="btn">
