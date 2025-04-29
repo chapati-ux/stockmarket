@@ -7,8 +7,10 @@ import icon3 from '../assets/images/bell.png';
 
 const ContactUs = () => {
   return (
+    <>
+     <Nav/>
     <div className="contact">
-      <Nav/>
+     
       <div className="letConnet">
         <div className="head1">
         <h2>Let’s Connect</h2>
@@ -81,6 +83,7 @@ const ContactUs = () => {
     </div>
       </div>
       </div>
+      </>
   )
 }
 
