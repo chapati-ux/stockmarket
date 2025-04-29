@@ -5,12 +5,18 @@ import abt from '../assets/images/abouti.png';
 import b1 from '../assets/images/rocket-icon.png';
 import b2 from '../assets/images/lock icon.png';
 import b3 from '../assets/images/bulb-icon.png';
+import rectangle from '../assets/images/Rectangle1.png';
+import rectangle1 from '../assets/images/Rectangle2.png';
+import web from '../assets/images/webimg.jpg';
+
+
 const AboutUs = () => {
   return (
+    <>
+    <Nav/>
     <div className="about">
     <div className="main">
-      <Nav/>
-    <h1>Empowering Your Investment Decisions with <br/> Clarity, Confidence & Compliance</h1>
+    <h2 className="heading1">Empowering Your Investment Decisions with <br/> Clarity, Confidence & Compliance</h2>
     <div className="content">
       <div className="column">
     <div className="text1">At Research Analyst Services, we provide data- <br/>driven market strategies and equity insights to <br />empower investors.</div>
@@ -18,7 +24,7 @@ const AboutUs = () => {
     </div>
   <div className="image"> < img src={abt}alt=""></img> </div>
       </div>
-      <button>Explore Services</button>
+      <button className="btn2" >Explore Services</button>
       </div>
       <div className="sec">
         <h2>Our Misson</h2>
@@ -50,8 +56,23 @@ const AboutUs = () => {
         
         </div>
         </div>
-        <div className="vision"></div>
-        </div>    
+        <div className="vision">
+          <h1>Backed by visionaries shaping the <br />future of finance and technology</h1>
+          <div className="vboxcontainer">
+        <div className="vbox">
+        <img src={rectangle}alt="" />
+
+        </div>
+        <div className="vbox">
+       <img  className =" webimage" src={web} alt="" />
+        </div>
+        <div className="vbox">
+          <img src={rectangle1}alt="" /></div>
+        </div>
+        </div>
+       
+        </div>  
+        </>  
   )
 }
 
