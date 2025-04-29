@@ -3,7 +3,7 @@ import "./components.css";
 import img from "../assets/images/texture.png";
 import mail from '../assets/images/mail-icon.svg'
 import { Link } from "react-router-dom";
-import logo from "../assets/logo/logo.svg"
+import logo from "../assets/logo/logo3.png"
 const Footer = (props) => {
   return (
     <div>
@@ -21,18 +21,18 @@ const Footer = (props) => {
 <p>{props.p}</p>
         {/* <p>Whether you have a question, need  assistance, or want to explore our services in more detail — reach out and our team will get back to you shortly.</p> */}
 
-        <button>Book a consultation</button>
+        <button><Link to="/contactus">Contact Us</Link> </button>
       </div>
 
       <div className="footer1">
         <div className="f1">
         <Link className="flink" to="/">
-            <img src={logo} alt="" />
+            <img  className="flogo" src={logo} alt="" />
             <p>Research Analyst <br />
           Services</p>
         </Link>
 
-        <div className="f1t">
+        <div className="f1">
           <h1>Disclaimer :</h1>
           <p>Investment in securities markets is subject to market risks. Read all scheme-related documents carefully before investing. Research Analyst Services is SEBI registered under INH000013040. 
           The content provided is for informational purposes only and does not constitute investment advice.</p>
@@ -60,14 +60,21 @@ const Footer = (props) => {
 
         <div className="f1">
           <h1>CONTACT</h1>
-          <Link className="Link">asramanager1@gmail.com</Link>
-          <Link className="Link">+91 8655662938</Link>
-          <Link className="Link">Dombivili(East), Maharashtra, India</Link>
+          {/* <Link className="Link" href="mailto:asramanager1@gmail.com">asramanager1@gmail.com</Link> */}
+          <a className="Link" href="mailto:asramanager1@gmail.com">asramanager1@gmail.com</a>
+          {/* <Link className="Link">+91 8655662938</Link> */}
+          <a className="Link" href="tel:+918655662938">+91 8655662938</a>
+          {/* <Link className="Link">Dombivili(East), Maharashtra, India</Link> */}
+          <a className="Link" >Dombivili(East), Maharashtra, India</a>
           {/* <Link></Link> */}
           {/* <Link></Link> */}
         </div>
-       
+        
       </div>
+      {/* <div className="f2">
+      <p>© 2025 Research Analyst Services. All rights reserved.</p>
+      </div> */}
+     
     </div>
   );
 };

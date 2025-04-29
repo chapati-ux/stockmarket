@@ -22,8 +22,7 @@ const Login = () => {
           <button>Submit</button>
         </div>
     </div>
-    <Footer img={mail}/>
-    </>
+    <Footer img={mail} h1={"We’re here to help you invest smarter."}  p={"Whether you have a question, need  assistance, or want to explore our services in more detail — reach out and our team will get back to you shortly."}/>    </>
   )
 }
 

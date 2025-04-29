@@ -6,12 +6,39 @@
   margin: 0;
   box-sizing: border-box;
 }
-html,body{
+html,
+body {
   height: 100%;
   width: 100%;
 }
-.navccon{
+.navccon {
+  width: 100%;
   position: relative;
+}
+ .nt{
+  opacity: 0.6;
+  background: #1F2227;
+text-align: center;
+color: white;
+padding: 0.5rem 0;
+font-size: 0.875rem;
+}
+ .nt p{
+  position: absolute;
+  color: #FFF;
+text-align: center;
+text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.77);
+font-family: Inter;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+@media (width<450px) {
+  /* .nt{
+    font-size: 0.7rem;
+    font-weight: 800;
+  } */
 }
 nav {
   position: absolute;
@@ -25,6 +52,11 @@ nav {
   z-index: 1;
   /* overflow-x: hidden; */
 }
+nav .nlogo img {
+  width: 3.0625rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+}
 nav .nlink {
   display: flex;
   align-items: center;
@@ -32,6 +64,7 @@ nav .nlink {
   font-size: 0.9rem;
   font-weight: 600;
   color: white;
+  /* background-color: red; */
 }
 nav .ntext {
   display: flex;
@@ -70,17 +103,40 @@ nav .btn .signup {
   border: 1px solid #4caf4f;
   background-color: transparent;
 }
-.imenu{
+.imenu {
   font-size: 3rem;
   color: white;
   display: none;
 }
+.menu {
+  display: none;
+  margin-top: 4.625rem;
+  height: calc(100vh - 4.625rem);
+  width: 100%;
+  /* background-color: green; */
+  background-color: white;
+  position: absolute;
+  z-index: 11;
+}
+.menu .ntext1 {
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu .ntext1 .link {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 @media (width<450px) {
-  nav{
+  nav {
     justify-content: space-between;
     padding: 0 1rem;
   }
-  nav .nlink{
+  nav .nlink {
     font-size: 0.9rem;
   }
   nav .ntext {
@@ -91,21 +147,27 @@ nav .btn .signup {
     /* background-color: red; */
     display: none;
   }
-  .imenu{
+  .imenu {
     display: block;
   }
 }
-
-.menu{
-  display: none;
-  margin-top: 4.625rem;
-  height: 90vh;
-  width: 100%;
+/* ^whatapp */
+.wh{
+  margin: 1rem;
+  position: fixed;
+  top: 80vh;
+  left: 95vw;
+  transform: translate(-100%,-100%);
+  border-radius: 50%;
+  z-index: 5555;
   background-color: green;
-  position: absolute;
-  z-index: 11;
+  padding: 0.2rem;
 }
-
+.hw{
+  font-size: 4rem;
+  color: white;
+  /* border-radius: 50%; */
+}
 /** Footer */
 .footer {
   position: relative;
@@ -170,19 +232,26 @@ nav .btn .signup {
   /* background-color: red; */
   border-radius: 4rem;
   background: #000;
+  /* background-color: yellow; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+.flogo {
+  width: 3.0625rem;
+  height: 3.375rem;
+  flex-shrink: 0;
+  margin: 1rem;
+  /* background-color: red; */
+}
 .img img {
   width: 7.86456rem;
   height: 6.29169rem;
 }
-
 .footer1 {
   width: 100%;
   height: 21.6875rem;
+  padding: 1rem 0;
   /* padding: 4rem; */
   /* background-color: red; */
   background-color: #0c0f27;
@@ -194,6 +263,7 @@ nav .btn .signup {
 .flink {
   display: flex;
   align-items: center;
+  /* background-color: green; */
 }
 .f1 {
   height: 60%;
@@ -223,71 +293,345 @@ nav .btn .signup {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  /* background-color: yellow; */
 }
-
-.login{
+/* .footer .f2 {
   width: 100%;
-height: 55rem;
-background-color:black;
-display: flex;
-align-items: center;
-justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100rem;
+  width: 100%;
+  position: absolute;
+  color: black;
+  text-align: center;
+  font-family: Inter;
+  font-size: 5.75rem;
+  font-weight: 400;
+  opacity: 0.5;
+  background-color: red;
+}
+.footer .fbot1 p{
+  text-align: center;
+} */
+@media (width<450px) {
+  .footer {
+    padding: 0 2rem;
+  }
+  .footer h1 {
+    width: 100%;
+    font-size: 1.9375rem;
+  }
+
+  .footer p {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .footer1 {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    /* background-color: red; */
+    background-color: #0c0f27;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .flink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+  }
+  .f1 {
+    margin: 1rem 0;
+    /* height: 60%; */
+    /* width: 20.9375rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    /* background-color: red; */
+  }
+  .f1 .Link {
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .f1 h1 {
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .f1 p {
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: normal; */
+    line-height: 1.5rem;
+    /* background-color: red; */
+  }
 }
 
-.lform{
+/* ^login */
+.login {
+  width: 100%;
+  height: 55rem;
+  /* background-color:black; */
+  background: linear-gradient(180deg, #0d0f29 0%, #7fa1e2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lform {
   width: 27.625rem;
-height: 29.125rem;
-flex-shrink: 0;
-background-color: black;
-border-radius: 1.25rem;
-border: 1px solid #FFF;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
-padding: 1rem;
+  height: 29.125rem;
+  flex-shrink: 0;
+  background-color: black;
+  border-radius: 1.25rem;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
 }
-.lf{
+.lf {
   width: 100%;
 }
-.lform h1{
+.lform h1 {
   color: white;
   font-family: Inter;
-font-size: 2.0625rem;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-background: linear-gradient(180deg, #FFF 0%, #D7D7D7 100%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  font-size: 2.0625rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  background: linear-gradient(180deg, #fff 0%, #d7d7d7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.lf label{
-  color: #9E9E9E;
-font-family: Inter;
-font-size: 1.2rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-left: 0.5rem;
+.lf label {
+  color: #9e9e9e;
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 0.5rem;
 }
-.lf input{
+.lf input {
   height: 2.5rem;
   width: 100%;
   border-radius: 1rem;
-  border: none;
+  /* border: none; */
+  border: 1px solid white;
 }
-.lform button{
+.lform button {
   width: 22.75rem;
-height: 2.625rem;
-flex-shrink: 0;
-border-radius: 1.3125rem;
-border: 1px solid #FFF;
-background: #E5E5E5;
-color: #000;
-font-family: Inter;
-font-size: 0.9375rem;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+  height: 2.625rem;
+  flex-shrink: 0;
+  border-radius: 1.3125rem;
+  border: 1px solid #fff;
+  background: #e5e5e5;
+  color: #000;
+  font-family: Inter;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (width<450px) {
+  .login {
+    width: 100%;
+    padding: 0 1rem;
+    height: 55rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+  }
+
+  .lform {
+    width: 100%;
+    height: 29.125rem;
+    flex-shrink: 0;
+    background-color: black;
+    /* background-color: yellow; */
+    border-radius: 1.25rem;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  .lf {
+    width: 100%;
+  }
+  .lform h1 {
+    color: white;
+    font-family: Inter;
+    font-size: 2.0625rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background: linear-gradient(180deg, #fff 0%, #d7d7d7 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .lf label {
+    color: #9e9e9e;
+    font-family: Inter;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 0.5rem;
+  }
+  .lf input {
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 1rem;
+    /* border: none; */
+    border: 1px solid white;
+  }
+  .lform button {
+    width: 10.75rem;
+    height: 2.625rem;
+    flex-shrink: 0;
+    border-radius: 1.3125rem;
+    border: 1px solid #fff;
+    background: #e5e5e5;
+    color: #000;
+    font-family: Inter;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+/* *popup */
+
+.pop{
+  /* display:none; */
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-50%);
+  z-index: 555;
+  width: 47.125rem;
+  padding: 0 0 4rem 0;
+  /* height: 36.6875rem; */
+  background-color: black;
+}
+.pop .c{
+  text-align: end;
+  /* background-color: yellow; */
+}
+.p1{
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: green; */
+}
+.p1 .pp1{
+  /* background-color: gray; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.p1 .pp1 label{
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+}
+.p1 .pp1 input{
+  text-align: center;
+width: 90%;
+background-color: white;
+color: black;
+}
+.p1  select{
+  text-align: center;
+width: 90%;
+background-color: white;
+color: black;
+}
+.pb{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pb button{
+  padding: 1rem 2rem;
+  background-color: white;
+}
+@media (width<450px) {
+  .pop{
+  /* display:none; */
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%,-50%);
+  z-index: 555;
+  width: 100%;
+  padding: 0 0 4rem 0;
+  /* height: 36.6875rem; */
+  background-color: black;
+}
+.pop .c{
+  text-align: end;
+  /* background-color: yellow; */
+}
+.p1{
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: green; */
+}
+.p1 .pp1{
+  /* background-color: gray; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.p1 .pp1 label{
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+}
+.p1 .pp1 input{
+  text-align: center;
+width: 90%;
+background-color: white;
+color: black;
+}
+.p1  select{
+  text-align: center;
+width: 90%;
+background-color: white;
+color: black;
+}
+
+.pb button{
+  padding: 1rem 2rem;
+  background-color: white;
+}
 }
